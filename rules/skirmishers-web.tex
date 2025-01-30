@@ -29,6 +29,11 @@
 \newcommand{\mysectiontitle}{}
 \newcommand{\newsection}[2]{\renewcommand{\mysectiontitle}{#2}\section{#1}}
 
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
 \newcommand{\Vline}[1]{}
 \newcommand{\Hline}[1]{\hline}
 
@@ -84,6 +89,14 @@
 % --------------------------------------------------------------------------------
 
 \input{3-Advanced-Infantry/index.tex}
+
+\newpage
+
+% --------------------------------------------------------------------------------
+\newsection{Sample Unit Cards}{sample-unit-cards}
+% --------------------------------------------------------------------------------
+
+\input{4-Resources/0-Sample-Unit-Cards.tex}
 
 \newpage
 

@@ -1,0 +1,68 @@
+There are several optional rules for combat.
+
+\paragraph*{Large Targets}
+
+Units may target large objects, such as buildings, walls, or vehicles, with explosives.
+Apply a -2 modifier when attacking a large object.
+
+\begin{table}[!h]
+\ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
+\centering
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\begin{tabular}{!{\Vline{1pt}} m{10em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}}}
+\Hline{1pt}
+\rowcolor{black!30}  \bfseries{Condition} & \bfseries{Modifier} \\
+\Hline{1pt}
+Large Target & -2  \\
+\Hline{1pt}
+\end{tabular}
+\caption*{To Hit Modifiers}
+\end{table}
+
+\paragraph*{Trooper Experience}
+
+The basic rules assume regular troopers; however, troopers may have different experience levels.
+More experienced troopers receive extra AP during their turn, but troopers may still only spend a maximum of 8 AP on movement.
+
+\begin{table}[!h]
+\ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
+\centering
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\begin{tabular}{!{\Vline{1pt}} m{10em} !{\Vline{1pt}} R{6em} !{\Vline{1pt}}}
+\Hline{1pt}
+\rowcolor{black!30}  \bfseries{Experience} & \bfseries{AP Bonus} \\
+\Hline{1pt}
+Green   & -1  \\
+Regular &  0  \\
+Veteran & +1  \\
+Elite   & +2  \\
+\Hline{1pt}
+\end{tabular}
+\caption*{Experience AP Bonus}
+\end{table}
+
+\paragraph*{Morale Checks}
+
+Once 4 or more troopers in a squad have died, the remaining troopers must make morale checks.
+Each remaining trooper must roll 2D6 and meet the number given in the chart below.
+Apply a +1 modifier if more than 4 troopers are dead.
+For example, add a +2 modifier if 6 troopers are dead.
+Apply a -N modifier based upon the leadership skill of the squad leader, if the squad leader is alive.
+The standard leadership skill of a squad leader is 2.
+
+\begin{table}[!h]
+\ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
+\centering
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\begin{tabular}{!{\Vline{1pt}} m{10em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}}}
+\Hline{1pt}
+\rowcolor{black!30}  \bfseries{Experience} & \bfseries{Target} \\
+\Hline{1pt}
+Green   & 9  \\
+Regular & 7  \\
+Veteran & 5  \\
+Elite   & 2  \\
+\Hline{1pt}
+\end{tabular}
+\caption*{Morale Checks}
+\end{table}

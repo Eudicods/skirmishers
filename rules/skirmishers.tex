@@ -45,6 +45,11 @@
 \newcommand{\Vline}[1]{\vrule width #1}
 \newcommand{\Hline}[1]{\noalign{\hrule height #1}}
 
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
 \setcounter{secnumdepth}{0}
 
 \titleformat{\section}[block]
@@ -166,6 +171,14 @@
 % --------------------------------------------------------------------------------
 
 \input{3-Advanced-Infantry/index.tex}
+
+\newpage
+
+% --------------------------------------------------------------------------------
+\section{Sample Unit Cards}
+% --------------------------------------------------------------------------------
+
+\input{4-Resources/0-Sample-Unit-Cards.tex}
 
 \newpage
 

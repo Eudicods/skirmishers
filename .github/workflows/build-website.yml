@@ -1,0 +1,40 @@
+name: Build Website
+
+on:
+  push:
+
+jobs:
+  build-web:
+   runs-on: ubuntu-latest
+   steps:
+   - name: Checkout
+     uses: actions/checkout@v4
+
+   - name: Run make4ht
+     uses: docker://ghcr.io/michal-h21/make4ht-action:latest
+     env:
+       command: |
+         cd rules &&
+         make4ht -f html5-copy_images -j index --output-dir html --config skirmishers-web.cfg skirmishers-web.tex &&
+         make4ht -f html5-copy_images -j index --output-dir html --config skirmishers-web.cfg skirmishers-web.tex &&
+         make4ht -f html5-copy_images -j index --output-dir html --config skirmishers-web.cfg skirmishers-web.tex &&
+         sed -i 's/\.png/\.webp/g' html/*.html &&
+         rm html/img/*.png &&
+         cp img/*.webp html/img/ &&
+         mkdir html/js &&
+         cp js/* html/js/ &&
+         sed -i -E 's/<\/head><body>/<script src="js\/download.js"><\/script>\n<\/head><body>/g' html/downloads.html &&
+         sed -i -E 's/^[    ]+<span/<span/g' html/*.html &&
+         sed -i -E 's/^<br \/>[    ]+<span/<br \/><span/g' html/*.html &&
+         sed -i -E 's/#B2B2B2/var(--table-header-background-color)/g' html/index.css &&
+         cp img/skirmishers.ico html/favicon.ico &&
+         touch html/.nojekyll &&
+         echo 'skirmishers.jeremylt.org' > html/CNAME
+
+   - name: Publish Website
+     uses: peaceiris/actions-gh-pages@v4
+     with:
+       github_token: ${{ secrets.GITHUB_TOKEN }}
+       publish_dir: ./rules/html
+       publish_branch: ${{ github.ref == 'refs/heads/main' && 'rules-web' || 'rules-web-staging' }}
+       force_orphan: true

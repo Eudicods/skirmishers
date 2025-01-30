@@ -1,0 +1,125 @@
+Troopers carry one primary weapon, one secondary weapon, and 4 hand grenades.
+All troopers have a helmet and combat knife.
+The combat knife is assumed to be affixed as a bayonet if the trooper is using some type of rifle or SMG.
+In some cases, troopers may carry additional equipment.
+
+\paragraph*{Primary Weapons}
+
+~\\
+
+Troopers may use the following primary weapons:
+
+\begin{table}[!h]
+\ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
+\centering
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\begin{tabular}{!{\Vline{1pt}} m{6em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}} R{7em} !{\Vline{1pt}} R{7em} !{\Vline{1pt}}}
+\Hline{1pt}
+\rowcolor{black!30}  \bfseries{Weapon} & \bfseries{Damage} & \bfseries{Short Range} & \bfseries{Long Range} \\
+\Hline{1pt}
+Auto Pistol*  & 2 & 1-7  & 8-20   \\
+Rifle         & 4 & 1-27 & 28-75  \\
+SMG*          & 3 & 1-17 & 18-25  \\
+Laser Rifle   & 5 & 1-17 & 18-105 \\
+Laser SMG*    & 4 & 1-25 & 26-70  \\
+Gyrojet Rifle & 6 & 1-57 & 58-180 \\
+\Hline{1pt}
+\end{tabular}
+\caption*{Primary Weapons}
+\end{table}
+
+Note, the auto pistol, SMG, and Laser SMG can fire into the same firing arc multiple times, while the other weapons may only fire into a firing arc once per turn.
+
+\paragraph*{Secondary Weapons}
+
+~\\
+
+Each trooper can have a maximum of 1 secondary weapon.
+Troopers may use the following ranged secondary weapons:
+
+\begin{table}[!h]
+\ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
+\centering
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\begin{tabular}{!{\Vline{1pt}} m{6em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}} R{7em} !{\Vline{1pt}} R{7em} !{\Vline{1pt}}}
+\Hline{1pt}
+\rowcolor{black!30}  \bfseries{Weapon} & \bfseries{Damage} & \bfseries{Short Range} & \bfseries{Long Range} \\
+\Hline{1pt}
+Pistol        & 3 & 1-7  & 8-20  \\
+Laser Pistol  & 4 & 1-12 & 13-30 \\
+\Hline{1pt}
+\end{tabular}
+\caption*{Ranged Secondary Weapons}
+\end{table}
+
+Instead of a ranged secondary weapon, troopers may use the following hand to hand secondary weapons:
+
+\begin{table}[!h]
+\ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
+\centering
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\begin{tabular}{!{\Vline{1pt}} m{7em} !{\Vline{1pt}} R{5em} !{\Vline{1pt}} R{7em} !{\Vline{1pt}} R{7em} !{\Vline{1pt}}}
+\Hline{1pt}
+\rowcolor{black!30}  \bfseries{Weapon} & \bfseries{Damage} & \bfseries{Short Range} & \bfseries{Long Range} \\
+\Hline{1pt}
+Fists         & (AP/2)B & 1 & - \\
+Blackjack     & 5B      & 1 & - \\
+Club          & 1, 4B   & 1 & - \\
+Stun Baton    & 8B      & 1 & - \\
+Bayonet/Knife & 3       & 1 & - \\
+Sword         & 4       & 1 & - \\
+Vibroblade    & 5       & 1 & - \\
+\Hline{1pt}
+\end{tabular}
+\caption*{Hand to Hand Secondary Weapons}
+\end{table}
+
+Troopers may use the following explosives:
+
+\begin{table}[!h]
+\ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
+\centering
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\begin{tabular}{!{\Vline{1pt}} m{12.1em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}} R{7em} !{\Vline{1pt}} R{7em} !{\Vline{1pt}}}
+\Hline{1pt}
+\rowcolor{black!30}  \bfseries{Weapon} & \bfseries{Damage} & \bfseries{AP} & \bfseries{Ammo} & \bfseries{Short Range} & \bfseries{Long Range} \\
+\Hline{1pt}
+Satchel Charge          &   10/5/2 & 3 or AP & 1 & AP/2 & -      \\
+Hand Grenade            &    6/3/1 & AP      & 4 & AP   & -      \\
+\Hline{1pt}
+\end{tabular}
+\caption*{Explosive Weapons}
+\end{table}
+
+The ammo indicates how many rounds come with the weapon.
+The damage is given is descending order for the point of detonation, the adjacent dots, the dots 2 away from the detonation, and so on.
+It takes 1 AP to throw a hand grenade 1 dot, and it takes 2 AP to throw a satchel charge 1 dot.
+
+\paragraph*{Armor}
+
+~\\
+
+Troopers may equip body armor.
+Body armor protects a number of contiguous cells in the armor section of the unit card.
+Cells protected by body armor ignore bludgeoning damage.
+Standard damage destroys the cell of body armor.
+
+\begin{table}[!h]
+\ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
+\centering
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\begin{tabular}{!{\Vline{1pt}} m{10em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}}}
+\Hline{1pt}
+\rowcolor{black!30}  \bfseries{Armor Type} & \bfseries{Coverage} & \bfseries{AP Cost} \\
+\Hline{1pt}
+Light & 2 & 1  \\
+Basic & 4 & 2  \\
+Heavy & 6 & 3  \\
+\Hline{1pt}
+\end{tabular}
+\caption*{Body Armor AP Costs}
+\end{table}
+
+To equip body armor on a trooper, mark the cells covered by body armor on the unit card.
+Then, reduce the AP to account for the body armor.
+For example, with basic body armor, mark 4 contiguous cells as protected by armor and reduce all values in the AP row by 2.

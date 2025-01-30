@@ -1,0 +1,135 @@
+After moving, troopers may use any remaining AP for combat actions, such as establishing a firing arc, engaging in hand to hand combat, or using explosives.
+
+\paragraph*{Firing Arcs}
+
+~\\
+
+A unit may establish a 30 degree, 60 degree, or 150 degree firing arc by paying the corresponding AP.
+When establishing a firing arc, the vertex of the arc is the dot the unit is standing on and can be oriented in any direction.
+When an enemy unit enters the firing arc, the friendly unit may fire upon the enemy unit.
+
+\begin{table}[!h]
+\ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
+\centering
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\begin{tabular}{!{\Vline{1pt}} m{10em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}}}
+\Hline{1pt}
+\rowcolor{black!30}  \bfseries{Firing Arc Size} & \bfseries{AP Cost} \\
+\Hline{1pt}
+30 Degrees  & 2  \\
+60 Degrees  & 4  \\
+150 Degrees & 6  \\
+\Hline{1pt}
+\end{tabular}
+\caption*{Firing Arc AP Costs}
+\end{table}
+
+\paragraph*{Resolving Fire}
+
+~\\
+
+Note: Players resolve fire during enemy movement, which occurs during your opponent's turn.
+
+If an enemy unit activates in or moves into a firing arc, the unit may choose to fire as long as the unit has line of sight.
+Draw a straight line between the enemy unit and the firing unit.
+Obstructions, such as furniture, light vegetation, and low walls, provide cover but do not block line of sight.
+Impassible obstacles, such as a solid high wall, the truck of a tree, or a unit, block line of sight.
+
+Resolving fire is a 2D6 check with the firing unit's current active weapon.
+If the roll meets or exceeds the target number, the attack succeeds.
+
+Count the number of dots in the shortest path between the firing unit and target unit to determine the range.
+If the weapon is in short range, the base target number is 6, and if the weapon is in long range, the base target number is 8.
+
+Add a +1 modifier for each obstruction in the path of fire between the firing unit and the target unit, except for any obstruction between the firing unit's dot and any adjacent dots.
+Use a -1 modifier if the attacking unit is prone.
+Add a +1 modifier if the target unit is prone and greater than 1 dot away.
+Use a -1 modifier if the target unit is prone and 1 dot away.
+
+\begin{table}[!h]
+\ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
+\centering
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\begin{tabular}{!{\Vline{1pt}} m{13em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}}}
+\Hline{1pt}
+\rowcolor{black!30}  \bfseries{Condition} & \bfseries{Modifier} \\
+\Hline{1pt}
+Short Range           & 6      \\
+Long Range            & 8      \\
+Cover                 & +1 per \\
+Attacker Prone        & -1     \\
+Target Prone          & + 1    \\
+Target Prone Adjacent & - 1    \\
+\Hline{1pt}
+\end{tabular}
+\caption*{Target Number Modifiers}
+\end{table}
+
+If the attack succeeds, roll an additional 2D6.
+This is the initial cell to apply damage in.
+
+Each weapon has a damage value, which indicates how many cells to mark.
+Starting with the initial cell, mark off the number of cells given by the damage value of the weapon, skipping any previously marked cells.
+If a cell is protected by body armor, destroy the body armor instead of marking the cell.
+The new maximum AP immediately applies to the target unit.
+If this new AP value meets or exceeds the AP the target unit has spent this turn, the target unit immediately falls prone and can take no further actions.
+
+If the weapon is not automatic (auto pistol, SMG, or laser SMG), then remove the firing arc once the firing is resolved.
+A unit may decide not to fire if they wish to preserve the firing arc for a future target.
+
+\paragraph*{Hand to Hand Combat}
+
+~\\
+
+It costs 5 AP to make a hand to hand attack.
+Hand to hand combat is resolved similarly to ranged combat, and the attack is resolved during the target unit's turn.
+The attacking unit must have a hand to hand weapon active.
+The attacking unit may use an affixed bayonet or use their active weapon as a club.
+
+Resolving hand to hand combat is a 2D6 check with the attacking unit's current active weapon.
+If the roll meets or exceeds the target number, the attack succeeds.
+
+The base target number is always 4, and only modifiers for damage on the attacking trooper applies.
+
+Standard damage is applied as above.
+Starting with the initial cell, mark off the number of cells given by the damage value of the weapon, skipping any previously marked cells.
+If a cell is protected by body armor, destroy the body armor instead of marking the cell.
+If the attack does bludgeoning damage, indicated by a \#B, apply this damage after any standard damage.
+Bludgeoning damage partially marks any unmarked cell and fully marks any partially marked cells.
+Starting with the next cell after the last marked cell for any standard damage, partially mark off the number of cells given by the bludgeoning damage value of the weapon, skipping any previously fully marked cells.
+If a cell is protected by body armor, the bludgeoning damage is ignored.
+
+\paragraph*{Explosives}
+
+~\\
+
+AP for attacks with explosives are given by the weapon.
+A thrown grenade costs 1 AP for each dot its thrown, and a thrown satchel charge costs 2 AP for each dot its thrown.
+Double these AP costs if the attacking unit is prone.
+A unit cannot set up a firing arc after using an explosive.
+
+A unit can throw a hand grenade or satchel charge down a ladder or stairs any number of levels, or may throw a hand grenade or satchel charge up one level, at a cost of 3 AP.
+The unit must be standing on the stairwell or ladder to throw the explosive up a level and may be on or adjacent to the stairwell or ladder to throw the explosive down any number of levels.
+
+Explosives are resolved similarly to ranged combat, but the attack is resolved during at the end of the attacking side's turn.
+
+Resolving explosives is a 2D6 check with the firing unit's current active explosive.
+If the roll meets or exceeds the target number, the attack succeeds.
+
+Hand grenades and satchel charges are always considered to be in short range and the base target number is 6.
+
+Add a +1 modifier for each obstruction in the path of fire between the firing unit and the target dot, except for any obstruction between the firing unit's dot and any adjacent dots.
+Use a -1 modifier if the attacking unit is prone.
+
+If the target number is met, apply damage starting at the target dot and moving outwards.
+Roll 2D6 for each trooper in the radius of the explosive to determine where the damage is applied.
+
+If the target number is not met, the explosive scatters.
+If the line of fire is not obstructed, the explosive scatters from the target point.
+If the line of fire is obstructed, the explosive scatters from the closest dot along the line of fire that is before the obstruction.
+Roll 1D6 to determine the scatter direction, identifying one direction to correspond to a result of 1 and proceeding clockwise with the other values.
+Roll 1D6 to determine the scatter distance.
+Satchel charges only scatter 1 dot.
+
+If the path of scatter intersects an impassible obstacle, such as a wall, stop the scatter on the last valid dot along the path of scatter.
+Then apply the damage as above from the scatter point.

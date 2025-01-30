@@ -1,0 +1,33 @@
+name: Build PDFs
+
+on:
+  push:
+
+jobs:
+  build-pdf:
+   runs-on: ubuntu-latest
+   steps:
+   - name: Checkout
+     uses: actions/checkout@v4
+
+   - name: Run pdflatex
+     uses: xu-cheng/texlive-action@v2
+     with:
+       scheme: full
+       run: |
+         cd rules
+         pdflatex skirmishers.tex
+         pdflatex skirmishers.tex
+         pdflatex skirmishers.tex
+         cd ..
+         mv rules/*.pdf .
+         mv scenarios/*/*.pdf .
+         ls | grep -vE ".pdf|.md" | xargs rm -rf
+
+   - name: Publish PDF
+     uses: peaceiris/actions-gh-pages@v4
+     with:
+       github_token: ${{ secrets.GITHUB_TOKEN }}
+       publish_dir: .
+       publish_branch: ${{ github.ref == 'refs/heads/main' && 'rules-pdf' || 'rules-pdf-staging' }}
+       force_orphan: true

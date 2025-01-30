@@ -1,0 +1,89 @@
+% --------------------------------------------------------------------------------
+% ---------------------------------  Preamble  -----------------------------------
+% --------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\usepackage{microtype}
+
+\usepackage[letterpaper, margin=0.75in]{geometry}
+\usepackage{graphicx}               % to insert figures
+\usepackage[table,x11names]{xcolor} % colors for e-copies
+\usepackage{subcaption}             % subfigures
+\usepackage{placeins}               % Float barriers
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{rotating}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{titlesec}
+\usepackage{hyperref}               % PDF hyperreferences
+\usepackage{titling}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{calc}
+\usepackage[T1]{fontenc}
+\usepackage{ifthen}
+
+\newcommand{\mysectiontitle}{}
+\newcommand{\newsection}[2]{\renewcommand{\mysectiontitle}{#2}\section{#1}}
+
+\newcommand{\Vline}[1]{}
+\newcommand{\Hline}[1]{\hline}
+
+\title{Skirmishers}
+\author{}
+\date{}
+
+\newcommand{\outworldsMode}{mode-web}
+
+% --------------------------------------------------------------------------------
+% ---------------------------------  Document  -----------------------------------
+% --------------------------------------------------------------------------------
+
+\begin{document}
+
+\makeatletter
+\Tag{TITLE+}{\@title}
+
+\begin{center}
+  \fontsize{30}{37}\bfseries\selectfont\MakeUppercase{War Department}
+  \fontsize{50}{60}\bfseries\selectfont\MakeUppercase{Skirmishers}
+  \fontsize{30}{37}\bfseries\selectfont\MakeUppercase{GM 1-1}
+
+  \LARGE\bfseries{Game Manual}
+\end{center}
+
+% --------------------------------------------------------------------------------
+\newsection{Introduction}{introduction}
+% --------------------------------------------------------------------------------
+
+\input{0-Introduction/index.tex}
+
+\newpage
+
+% --------------------------------------------------------------------------------
+\newsection{Infantry}{infantry}
+% --------------------------------------------------------------------------------
+
+\input{2-Infantry/index.tex}
+
+% --------------------------------------------------------------------------------
+\newsection{Advanced Infantry}{advanced-infantry}
+% --------------------------------------------------------------------------------
+
+\input{3-Advanced-Infantry/index.tex}
+
+\newpage
+
+% --------------------------------------------------------------------------------
+\newsection{Downloads}{downloads}
+\label{sec:downloads}
+% --------------------------------------------------------------------------------
+
+\input{5-Downloads/0-Downloads.tex}
+
+\newpage
+\end{document}
+% --------------------------------------------------------------------------------

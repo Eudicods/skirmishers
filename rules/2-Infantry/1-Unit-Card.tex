@@ -1,0 +1,59 @@
+The unit card shows the current capabilities of a trooper and tracks damage.
+A unit card can be formatted in any way so long as it contains all the essential information.
+Below is a sample unit card for a basic infantry trooper.
+
+\begin{table}[!h]
+\ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
+\centering
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\begin{tabular}{!{\Vline{1pt}} m{5em} !{\Vline{1pt}} m{2em} !{\Vline{1pt}} m{2em} !{\Vline{1pt}} m{2em} !{\Vline{1pt}} m{2em} !{\Vline{1pt}} m{2em} !{\Vline{1pt}} m{2em} !{\Vline{1pt}} m{2em} !{\Vline{1pt}} m{2em} !{\Vline{1pt}} m{2em} !{\Vline{1pt}} m{2em} !{\Vline{1pt}} m{2em} !{\Vline{1pt}} m{2.5em} !{\Vline{1pt}}}
+\Hline{1pt}
+\rowcolor{black!30} \multicolumn{13}{!{\Vline{1pt}}c!{\Vline{1pt}}}{\bfseries{Basic Infantry Trooper}} \\
+\Hline{1pt}
+\multicolumn{2}{!{\Vline{1pt}}c!{\Vline{1pt}}}{Name} & \multicolumn{11}{c!{\Vline{1pt}}}{} \\
+\Hline{1pt}
+\multicolumn{2}{!{\Vline{1pt}}c!{\Vline{1pt}}}{Number} & & \multicolumn{2}{c!{\Vline{1pt}}}{Skill} & \multicolumn{8}{c!{\Vline{1pt}}}{} \\
+\Hline{1pt}
+HP    & 10 &  9 &  8 &  7 &  6 &  5 &  4 &  3 &  2 &  1 &  0 & Dead \\
+\Hline{1pt}
+Armor &    &    &    &    &    &    &    &    &    &    &    &      \\
+\Hline{1pt}
+AP    &  8 &  8 &  8 &  8 &  7 &  7 &  6 &  6 &  5 &  4 &  0 &      \\
+\Hline{1pt}
+Mod   &    &    &    & +1 & +1 & +2 & +2 & +2 & +3 & +3 &  - &      \\
+\Hline{1pt}
+\multicolumn{2}{!{\Vline{1pt}}c!{\Vline{1pt}}}{Primary} & \multicolumn{2}{c!{\Vline{1pt}}}{} & \multicolumn{2}{c!{\Vline{1pt}}}{Damage} & & \multicolumn{2}{c!{\Vline{1pt}}}{Long} & & \multicolumn{2}{c!{\Vline{1pt}}}{Short} & \\
+\Hline{1pt}
+\multicolumn{2}{!{\Vline{1pt}}c!{\Vline{1pt}}}{Secondary} & \multicolumn{2}{c!{\Vline{1pt}}}{} & \multicolumn{2}{c!{\Vline{1pt}}}{Damage} & & \multicolumn{2}{c!{\Vline{1pt}}}{Long} & & \multicolumn{2}{c!{\Vline{1pt}}}{Short} & \\
+\Hline{1pt}
+\multicolumn{3}{!{\Vline{1pt}}c!{\Vline{1pt}}}{Hand Grenades} & & & & & \multicolumn{2}{c!{\Vline{1pt}}}{Other} & \multicolumn{4}{c!{\Vline{1pt}}}{} \\
+\Hline{1pt}
+\multicolumn{3}{!{\Vline{1pt}}c!{\Vline{1pt}}}{Squad Leader} & \multicolumn{4}{c!{\Vline{1pt}}}{} & \multicolumn{2}{c!{\Vline{1pt}}}{Leadership} & \multicolumn{4}{c!{\Vline{1pt}}}{} \\
+\Hline{1pt}
+\end{tabular}
+\caption*{Basic Infantry Trooper Unit Card}
+\end{table}
+
+Basic information about the trooper, such as their name, rank, squad position number, and skill level are tracked at the top of the unit card.
+
+Damage to the trooper is tracked in the HP section.
+HP cells are fully marked off when the trooper takes standard damage or partially marked when the trooper takes bludgeoning damage.
+The current HP of the trooper is given by the first cell to the right of the lowest fully marked HP cell.
+For example, if the trooper has HP 9, 7, and 6 marked off and HP 5 partially marked, their current HP is 5.
+
+If the trooper is wearing armor, mark the contiguous block of HP cells protected by the armor in the Armor section.
+Armor must be destroyed before the corresponding HP cell is marked off.
+
+Total action points (AP) for the trooper are given in the AP section.
+Use the value in the column corresponding to the trooper's current HP.
+For example, if the trooper has 5 HP, then they have only 7 AP.
+
+Similarly, the modifier section tracks the current modifier for the trooper's target numbers based upon current HP.
+For example, if the trooper has 5 HP, then add +2 to all target numbers.
+
+The weapons and equipment section list the primary and secondary weapons the trooper is equipped with, along with their damage values and range brackets.
+Basic troopers also carry 4 hand grenades and may carry additional equipment.
+Any rifle automatically comes with a bayonet equipped.
+
+The leadership section lists the squad leader for the trooper and their leadership score.
+This section contains the information required for morale checks.

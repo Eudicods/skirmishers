@@ -1,0 +1,46 @@
+Troopers may carry a crewed weapon in place of their primary weapon.
+
+\begin{table}[!h]
+\ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
+\centering
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\begin{tabular}{!{\Vline{1pt}} m{14em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}} R{7em} !{\Vline{1pt}} R{7em} !{\Vline{1pt}}}
+\Hline{1pt}
+\rowcolor{black!30}  \bfseries{Weapon} & \bfseries{Damage} & \bfseries{Crew} & \bfseries{Short Range} & \bfseries{Long Range} \\
+\Hline{1pt}
+Light Machine Gun         &  5 & 0 & 1-30  &  31-84  \\
+Medium Machine Gun        &  6 & 1 & 1-30  &  31-84  \\
+Heavy Machine Gun         &  7 & 2 & 1-36  &  37-110 \\
+Semi-Portable Laser       & 11 & 1 & 1-80  &  81-240 \\
+Heavy Semi-Portable Laser & 14 & 2 & 1-100 & 101-280 \\
+\Hline{1pt}
+\end{tabular}
+\caption*{Crewed Weapons}
+\end{table}
+
+The crew indicates how many additional troopers must be nearby to setup the weapon.
+For example, a semi-portable laser requires one extra trooper to be adjacent to the trooper carrying the weapon during setup.
+Each trooper involved must use 4 AP to setup or break down a crewed weapon.
+
+\begin{table}[!h]
+\ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
+\centering
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\begin{tabular}{!{\Vline{1pt}} m{12em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}}}
+\Hline{1pt}
+\rowcolor{black!30}  \bfseries{Action} & \bfseries{AP Cost} \\
+\Hline{1pt}
+Setup Weapon     & 4 (per) \\
+Tear Down Weapon & 4 (per) \\
+Takeover Weapon  & 6       \\
+\Hline{1pt}
+\end{tabular}
+\caption*{Crewed Weapon AP Costs}
+\end{table}
+
+If the trooper controlling a crew served weapon is killed or abandons the weapon, any other trooper, friendly or enemy, may take over the crew served weapon.
+To take over a crew served weapon, a trooper must enter the dot with the weapon and spend 6 AP to switch active weapons.
+
+Crew served weapons set up firing arcs like rifles and pistols; however crew served weapons may only use 60 degree firing arcs.
+Fire is resolved the same way as with standard weapons.
+Crew served weapons are always automatic weapons, so the firing arc is not removed after the firing is resolved.

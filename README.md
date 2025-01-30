@@ -20,7 +20,7 @@
 [![Build Website][build-web-badge]][build-web-job]
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-badge]][cc-by-nc-sa]
 
-Skirmishers is a 28mm tabletop infantry combat game.
+Skirmishers is a 25mm tabletop infantry combat game.
 
 The latest PDF of the rules can be found [here][skirmishers-pdf].
 The web format of the rules can be found [here][skirmishers-web].

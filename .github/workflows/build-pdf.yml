@@ -21,7 +21,6 @@ jobs:
          pdflatex skirmishers.tex
          cd ..
          mv rules/*.pdf .
-         mv scenarios/*/*.pdf .
          ls | grep -vE ".pdf|.md" | xargs rm -rf
 
    - name: Publish PDF

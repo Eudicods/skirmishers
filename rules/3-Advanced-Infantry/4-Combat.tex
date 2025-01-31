@@ -19,6 +19,33 @@ Large Target & -2  \\
 \caption*{To Hit Modifiers}
 \end{table}
 
+If the cumulative damage applied to a wall or building exceeds the toughness of the structure, then the structure is breached.
+Damaged is tracked per dot.
+The location of the breach becomes rough terrain and costs 3 AP to move into.
+If using breach rules, the toughness of each building and wall must be identified before the game starts.
+
+\begin{table}[!h]
+\ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
+\centering
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\begin{tabular}{!{\Vline{1pt}} m{10em} !{\Vline{1pt}} R{6em} !{\Vline{1pt}}}
+\Hline{1pt}
+\rowcolor{black!30}  \bfseries{Building} & \bfseries{Toughness} \\
+\Hline{1pt}
+Tree     &  5   \\
+Wall     & 10   \\
+Light    & 15   \\
+Medium   & 40   \\
+Heavy    & 90   \\
+Hardened & 140  \\
+\Hline{1pt}
+\end{tabular}
+\caption*{Building Toughness}
+\end{table}
+
+Explosives may also be used to target trees.
+As with buildings, after the tree is destroyed, the terrain becomes rough at that dot and costs 3 AP to move into.
+
 \paragraph*{Trooper Experience}
 
 The basic rules assume regular troopers; however, troopers may have different experience levels.

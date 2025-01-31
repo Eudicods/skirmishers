@@ -15,6 +15,7 @@ Barbed Wire       & 6  \\
 Climb Wall        & 5  \\
 Enter/Exit Tunnel & 2  \\
 Enter/Exit Trench & 3  \\
+Shallow Water     & 4  \\
 Swimming          & 4  \\
 \Hline{1pt}
 \end{tabular}
@@ -38,6 +39,8 @@ It costs 2 AP to enter or exit a tunnel and 3 AP to enter or exit a trench.
 Moving through a trench costs standard movement AP; however, a trooper in a tunnel must crawl and movement costs double the standard AP.
 A trooper in a trench counts as prone when being targeted, but a trooper in a tunnel cannot be seen or targeted by units outside of the tunnel.
 
+Wading through shallow water costs 4 AP but is otherwise like standard movement.
+Troopers must swim trough deep water.
 A trooper may swim across water if they are only carrying one weapon.
 For example, a trooper can only attempt to swim if they are carrying a primary or secondary weapon, but not both.
 Note that a grenade launcher attached to a rifle or SMG counts as part of the primary weapon and a trooper may swim with a grenade launcher attached to a rifle or SMG.
@@ -50,7 +53,7 @@ Explosives do an extra 2 standard damage at each range to targets in water.
 \ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
 \centering
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\begin{tabular}{!{\Vline{1pt}} m{10em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}}}
+\begin{tabular}{!{\Vline{1pt}} m{11em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}}}
 \Hline{1pt}
 \rowcolor{black!30}  \bfseries{Condition} & \bfseries{Modifier} \\
 \Hline{1pt}
@@ -67,9 +70,14 @@ Defender Swimming  & +1  \\
 Troopers equipped with jet packs may move further than standard troopers.
 Jet packs are heavy, and troopers wearing jet packs receive a -2 AP penalty.
 
+It costs 3 AP to activate a jet pack.
 When activating a jet pack, a trooper must move 6 to 16 dots.
 A jet pack cannot be used to move fewer than 6 dots, and a jet pack can only be used once in a turn.
 A jet pack can only be used outdoors or next to a window or door if the trooper immediately goes outside during the flight.
+
+A trooper can go up or down in elevation 1 level for every 3 dots they travel.
+For example, if a trooper activated a jet pack to move 10 dots, then they can go up or down in elevation by up to 3 levels.
+A trooper on the ground could land on the roof of a two story building by moving at least 6 dots when activating their jet pack.
 
 \begin{table}[!h]
 \ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont

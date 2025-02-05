@@ -4,34 +4,34 @@ Troopers may carry a crew served weapon in place of their primary weapon.
 \ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
 \centering
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\begin{tabular}{!{\Vline{1pt}} m{14em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}} R{7em} !{\Vline{1pt}} R{7em} !{\Vline{1pt}}}
+\begin{tabular}{!{\Vline{1pt}} m{14em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}} R{3.5em} !{\Vline{1pt}} R{6.5em} !{\Vline{1pt}} R{6.5em} !{\Vline{1pt}}}
 \Hline{1pt}
 \rowcolor{black!30}  \bfseries{Weapon} & \bfseries{Damage} & \bfseries{Crew} & \bfseries{Short Range} & \bfseries{Long Range} \\
 \Hline{1pt}
-Light Machine Gun         &  5X & 0 & 1-30  &  31-84  \\
-Medium Machine Gun        &  6X & 1 & 1-30  &  31-84  \\
-Heavy Machine Gun         &  7X & 2 & 1-36  &  37-110 \\
-Semi-Portable Laser       & 11X & 1 & 1-80  &  81-240 \\
-Heavy Semi-Portable Laser & 14X & 2 & 1-100 & 101-280 \\
+Light Machine Gun*         &  5X & 0 & 1-30  &  31-84  \\
+Medium Machine Gun*        &  6X & 1 & 1-30  &  31-84  \\
+Heavy Machine Gun*         &  7X & 2 & 1-36  &  37-110 \\
+Semi-Portable Laser*       & 11X & 1 & 1-80  &  81-240 \\
+Heavy Semi-Portable Laser* & 14X & 2 & 1-100 & 101-280 \\
 \Hline{1pt}
 \end{tabular}
 \caption*{Crew Served Weapons}
 \end{table}
 
-The crew indicates how many additional troopers must be nearby to setup or break down the weapon.
-These additional troopers still use their standard weapons.
-For example, a semi-portable laser requires one extra trooper to be adjacent to the trooper carrying the weapon during setup or break down.
-Each trooper involved must use 4 AP to setup or break down a crew served weapon.
+The crew indicates how many additional troopers must be nearby to set up or break down the weapon.
+For example, a semi-portable laser requires one extra trooper to be adjacent to the trooper carrying the weapon during set up or break down.
+Each trooper involved must use 4 AP to set up or break down a crew served weapon.
+These additional troopers still carry and use their standard weapons, but they may not fire these weapons while carrying a part of the crew served weapon.
 
 \begin{table}[!h]
 \ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
 \centering
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\begin{tabular}{!{\Vline{1pt}} m{12em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}}}
+\begin{tabular}{!{\Vline{1pt}} m{11em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}}}
 \Hline{1pt}
 \rowcolor{black!30}  \bfseries{Action} & \bfseries{AP Cost} \\
 \Hline{1pt}
-Setup Weapon      & 4 (per) \\
+Set up Weapon     & 4 (per) \\
 Break Down Weapon & 4 (per) \\
 Takeover Weapon   & 6       \\
 \Hline{1pt}
@@ -43,5 +43,6 @@ If the trooper controlling a crew served weapon is killed or abandons the weapon
 To take over a crew served weapon, a trooper must enter the dot with the weapon and spend 6 AP to switch active weapons.
 
 Crew served weapons set up firing arcs like rifles and pistols; however crew served weapons may only use 60 degree firing arcs.
+The firing arc direction is established when the weapon is set up, and the weapon must be broken down and set up again to change the firing arc.
 Fire is resolved the same way as with standard weapons.
 Crew served weapons are always automatic weapons, so the firing arc is not removed after the firing is resolved.

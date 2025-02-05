@@ -4,9 +4,9 @@ Troopers may use the following advanced explosives:
 \ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
 \centering
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\begin{tabular}{!{\Vline{1pt}} m{12.1em} !{\Vline{1pt}} R{6.2em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}} R{7em} !{\Vline{1pt}} R{7em} !{\Vline{1pt}}}
+\begin{tabular}{!{\Vline{1pt}} m{12.1em} !{\Vline{1pt}} R{6.2em} !{\Vline{1pt}} R{4.1em} !{\Vline{1pt}} R{4em} !{\Vline{1pt}} R{6.5em} !{\Vline{1pt}} R{6.5em} !{\Vline{1pt}}}
 \Hline{1pt}
-\rowcolor{black!30}  \bfseries{Weapon} & \bfseries{Damage} & \bfseries{AP} & \bfseries{Ammo} & \bfseries{Short Range} & \bfseries{Long Range} \\
+\rowcolor{black!30}  \bfseries{Weapon} & \bfseries{Damage} & \bfseries{AP Cost} & \bfseries{Ammo} & \bfseries{Short Range} & \bfseries{Long Range} \\
 \Hline{1pt}
 Light Anti-Tank Weapon  &     7X/3X/1X & 4 & 1 & 1-22 & 23-80  \\
 Rocket Launcher         &     8X/4X/2X & 5 & 2 & 1-44 & 45-108 \\
@@ -42,13 +42,14 @@ Incendiary weapons are resolved like explosives.
 \ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
 \centering
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\begin{tabular}{!{\Vline{1pt}} m{12.1em} !{\Vline{1pt}} R{6.2em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}} R{7em} !{\Vline{1pt}} R{7em} !{\Vline{1pt}}}
+\begin{tabular}{!{\Vline{1pt}} m{12.1em} !{\Vline{1pt}} R{5em} !{\Vline{1pt}} R{4.1em} !{\Vline{1pt}} R{4em} !{\Vline{1pt}} R{6.5em} !{\Vline{1pt}} R{6.5em} !{\Vline{1pt}}}
 \Hline{1pt}
-\rowcolor{black!30}  \bfseries{Weapon} & \bfseries{Damage} & \bfseries{AP} & \bfseries{Ammo} & \bfseries{Short Range} & \bfseries{Long Range} \\
+\rowcolor{black!30}  \bfseries{Weapon} & \bfseries{Damage} & \bfseries{AP Cost} & \bfseries{Ammo} & \bfseries{Short Range} & \bfseries{Long Range} \\
 \Hline{1pt}
-Flamethrower       &    2X/1X & 2 & - & 1-6  &  7-12  \\
-Heavy Flamethrower & 2X/2X/1X & 4 & 4 & 1-6  &  7-12  \\
-Incendiary Rocket  & 4X/2X/1X & 5 & 2 & 1-44 & 45-108 \\
+Flamethrower       &    2X/1X &  2 & - &  1-6 &  7-12  \\
+Heavy Flamethrower & 2X/2X/1X &  4 & 4 &  1-6 &  7-12  \\
+Incendiary Grenade & 4X/2X/1X & AP & 4 &   AP &   -    \\
+Incendiary Rocket  & 4X/2X/1X &  5 & 2 & 1-44 & 45-108 \\
 \Hline{1pt}
 \end{tabular}
 \caption*{Advanced Explosive Weapons}
@@ -65,6 +66,8 @@ All effected dots light on fire after resolving the damage.
 Fire is an obstruction that is as tall as a trooper and provides cover, like light vegetation.
 Troopers entering a dot on fire take 1 point of standard damage (X).
 If a trooper ends their movement on a dot that is on fire, they take 8 points of standard damage (X).
+
+Incendiary grenades are resolved like hand grenades but do incendiary damage, as described above.
 
 \paragraph*{Smoke Grenades}
 

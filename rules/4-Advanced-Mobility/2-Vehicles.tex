@@ -6,7 +6,7 @@ The unit card shows the current capabilities of a vehicle and tracks damage.
 A unit card can be formatted in any way so long as it contains all the essential information.
 Below is a sample unit card for a basic motorcyle.
 
-\begin{figure}[!h]
+\begin{figure}[H]
   \centering
   \includegraphics[alt='Sample Regular Trooper', width=5.63in, height=4in]{img/RegularTrooper.png}
   \caption*{Basic Motorcycle Vehicle Unit Card}
@@ -37,7 +37,7 @@ The weapons section list the weapons mounted on the vehicle, along with their or
 In order to use a vehicle, a trooper must first mount the vehicle and turn it on.
 The vehicle stays on until turned off.
 
-\begin{table}[!h]
+\begin{table}[H]
 \ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
 \centering
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -55,7 +55,7 @@ Turn on/off    & 1  \\
 Once a trooper is on the vehicle, they must select a movement mode for the turn.
 A trooper can only select a movement mode if they have sufficient remaining AP for that movement mode and the vehicle currently supports that movement mode.
 
-\begin{table}[!h]
+\begin{table}[H]
 \ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
 \centering
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -74,9 +74,10 @@ Max     & 7  \\
 The trooper must use the exact number of AP given by the movement mode to move the vehicle, unless the vehicle is brought to a full stop.
 Accelerating from a full stop costs 1 AP and decelerating to a full stop costs 2 AP.
 The vehicle card says how many dots the vehicle moves for each AP spent to move.
-The vehicle also moves this number of dots while starting from a full stop or going to a full stop.
+The vehicle also moves this number of dots while starting from a full stop or slowing to a full stop.
+The vehicle cannot pass through impassible obstacles or solid obstructions.
 
-\begin{table}[!h]
+\begin{table}[H]
 \ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
 \centering
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -85,7 +86,7 @@ The vehicle also moves this number of dots while starting from a full stop or go
 \rowcolor{black!30}  \bfseries{Action} & \bfseries{AP Cost} \\
 \Hline{1pt}
 Start from full stop & 1  \\
-Go to full stop      & 2  \\
+Slow to full stop    & 2  \\
 Move                 & 1  \\
 \Hline{1pt}
 \end{tabular}
@@ -97,7 +98,7 @@ A vehicle must move forward by at least 1 dot before turning.
 The front of the vehicle stays in place while the rear of the vehicle swings to a new dot for turning.
 Since a 60 degree (1 dot) turn costs no AP to execute, it is the only turn that can be executed during the minimum movement mode.
 
-\begin{table}[!h]
+\begin{table}[H]
 \ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
 \centering
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -116,7 +117,7 @@ Since a 60 degree (1 dot) turn costs no AP to execute, it is the only turn that 
 When executing a 120 or 180 degree turn, the trooper must make a control check.
 A control check is a 2D6 check with the target number set by the chart below, will any applicable modifiers for damage to the trooper and the vehicle.
 
-\begin{table}[!h]
+\begin{table}[H]
 \ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
 \centering
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -135,7 +136,7 @@ A control check is a 2D6 check with the target number set by the chart below, wi
 Decelerating to a full stop while using the cruise or maximum movement modes also requires a control check.
 A trooper may incorporate a turn into the deceleration to a full stop, but this increases the difficulty of the control check.
 
-\begin{table}[!h]
+\begin{table}[H]
 \ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
 \centering
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -165,16 +166,17 @@ Starting with the initial cell, mark off the number of cells given by the modifi
 
 \paragraph*{Wipeout}
 
-If a trooper fails a control check, then they wipe out.
+If a trooper fails a control check, has insufficient AP to complete the current movement mode, or the vehicle is damaged and cannot complete the movement mode, then the vehicle and rider wipe out.
+
 If the vehicle was attempting to turn, then set the rear of the vehicle as if it had completed a 60 degree shallower turn.
 For example, if trooper wiped out while executing a 120 degree turn, then set the rear of the vehicle as if it had completed a 60 degree turn.
 The vehicle then skids along the ground in a straight line from this point.
 If the vehicle was using the cruise movement mode, then it skids the number of dots given by 1 AP of movement, and if the vehicle was using the maximum movement mode, then it skids the number of dots given by 2 AP of movement.
-If the vehicle hits an object while skidding, then stop the skid immediately and apply ramming damage to the vehicle and trooper.
+If the vehicle hits an impassible obstruction or solid obstruction while skidding, then stop the skid immediately and apply ramming damage to the vehicle and trooper.
 
 After wiping out, it costs 3 AP for a trooper to climb out from underneath a vehicle and and additional 3 AP to lift the vehicle to an upright position.
 
-\begin{table}[!h]
+\begin{table}[H]
 \ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
 \centering
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -198,7 +200,7 @@ When a vehicle's front is in the same dot as an enemy trooper or vehicle, the ve
 Apply the ramming damage to both the vehicle and the enemy unit, then make a control check with a base target number of 6.
 On a failed control check, the trooper wipes out, as above.
 
-\begin{table}[!h]
+\begin{table}[H]
 \ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
 \centering
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -219,7 +221,7 @@ The trooper's active melee weapon does additional damage based upon the movement
 Apply the melee damage to the enemy trooper, then make a control check with a base target number of 6.
 On a failed control check, the trooper wipes out, as above.
 
-\begin{table}[!h]
+\begin{table}[H]
 \ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
 \centering
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}

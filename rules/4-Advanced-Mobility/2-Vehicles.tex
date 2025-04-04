@@ -4,13 +4,15 @@ Troopers may use vehicles, such as motorcycles and hoverbikes, for enhanced mobi
 
 The unit card shows the current capabilities of a vehicle and tracks damage.
 A unit card can be formatted in any way so long as it contains all the essential information.
-Below is a sample unit card for a basic motorcyle.
+Below is a sample unit card for a basic vehicle.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[alt='Sample Regular Trooper', width=5.63in, height=4in]{img/RegularTrooper.png}
-  \caption*{Basic Motorcycle Vehicle Unit Card}
+  \includegraphics[alt='Sample Vehicle', width=5.63in, height=4in]{img/Vehicle.png}
+  \caption*{Basic Vehicle Unit Card}
 \end{figure}
+
+Basic information about the vehicle, such as its type and id number.
 
 Damage to the vehicle is tracked in the HP section.
 HP cells are labeled by their HP value, from highest to lowest, 12 to 0, from left to right.
@@ -18,11 +20,7 @@ HP cells are fully crossed out when the vehicle takes standard damage (X).
 Vehicles ignore bludgeoning damage (\textbackslash).
 The current HP of the vehicle is given by the first cell to the right of the lowest fully marked HP cell.
 
-If the vehicle's armor value is given by in the armor section.
-Subtract this value from the total amount of standard damage (X) done to the vehicle prior to assigning the damage to a location.
-The armor may reduce the damage to 0.
-
-The maximum valid movement mode for the vehicle is given in the movement mode section.
+The maximum valid movement mode for the vehicle is given in the AP section.
 Use the value in the column corresponding to the vehicle's current HP.
 For example, if the vehicle has 5 HP, then it can only use the minimum or cruse movement modes.
 
@@ -30,7 +28,44 @@ Similarly, the modifier section tracks the current modifier for the vehicle's ta
 This modifier only applies to vehicle control checks and attacks made with weapons mounted to the vehicle.
 For example, if the vehicle has 5 HP, then add +2 to all target numbers.
 
+The vehicle's speed multiplier is given by the speed multiplier section.
+This is how many dots the bike moves for each AP spend on movement.
+The standard speed of a light scout vehicle is 3 and the standard speed of an assault vehicle is 2.
+
+The vehicle's handling modifier is given by the handling section.
+This modifier applies to all control checks.
+The standard handling modifier of a light scout vehicle is 0 and the standard handling modifier of an assault vehicle is 1.
+
+If the vehicle's armor value is given by in the armor section.
+Standard damage (X) destroys armor before damaging HP cells.
+If a single attack does more damage than the remaining armor, first mark all remaining armor and then roll 2D6 to determine where to apply the remaining damage.
+The standard armor of a light scout vehicle is 4 and the standard armor of an assault vehicle is 8.
+
+The signature section gives any defensive modifiers for attacks on the vehicle.
+If the vehicle has stealth armor, the signature modifier for the vehicle is typically 1.
+
+The ammo section lists any additional ammo for any weapons mounted on the vehicle.
+
 The weapons section list the weapons mounted on the vehicle, along with their orientation, damage values, and range brackets.
+The standard light scout vehicle has no weapons and the assault vehicle has two forward mounted weapons.
+
+\paragraph*{Map Template}
+
+The map template shows the location of the vehicle on the map.
+Below is a sample map template for a basic vehicle.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[alt='Sample Vehicle Map Template', width=6.5in, height=3.66in]{img/MapVehicle.png}
+  \caption*{Basic Vehicle Map Template}
+\end{figure}
+
+Motorcycles and hoverbikes occupy two dots on the map.
+On the given template, the triangle indicates the front of the vehicle and the rear of the vehicle.
+
+The trooper sits on the rear dot of the template, and weapon attacks to or from the trooper are measured from this point.
+Front facing weapons are mounted on the front dot and rear facing weapons are mounted on the rear dot.
+Weapon attacks on the vehicle may target either dot.
 
 \paragraph*{Movement}
 
@@ -155,12 +190,15 @@ A trooper may incorporate a turn into the deceleration to a full stop, but this 
 
 When a vehicle enters an enemy firing arc, resolve the attack immediately.
 The enemy unit may target either the vehicle or the trooper, but not both.
+The vehicle and trooper together can only be attacked once for each AP spent on movement.
+For example, if a vehicle has a speed modifier of 3, then the vehicle and trooper together can only be attacked once for each 3 dots traversed.
+
 If the damage to the vehicle makes the current movement mode invalid or damage to the trooper leaves insufficient AP to complete the current movement mode, then they automatically wipe out as if they had failed a control check.
 
 \paragraph*{Vehicle Damage}
 
-When applying damage to a vehicle, first subtract the vehicle's armor value from the total damage.
-Then, roll 2D6.
+When applying damage to a vehicle, first apply damage to any remaining armor.
+If there is remaining damage after the armor is destroyed, roll 2D6.
 This is the initial cell to apply damage in.
 Starting with the initial cell, mark off the number of cells given by the modified damage value, skipping any previously marked cells.
 
@@ -197,7 +235,9 @@ A trooper may make four types of attacks while on a vehicle - ramming, melee, mo
 All of these attacks, except standard fire, occur during the movement of the vehicle.
 
 When a vehicle's front is in the same dot as an enemy trooper or vehicle, the vehicle makes a ramming attack.
-Apply the ramming damage to both the vehicle and the enemy unit, then make a control check with a base target number of 6.
+Apply the ramming damage to the enemy unit.
+Only apply damage to the vehicle if it has no remaining armor.
+Then make a control check with a base target number of 6.
 On a failed control check, the trooper wipes out, as above.
 
 \begin{table}[H]

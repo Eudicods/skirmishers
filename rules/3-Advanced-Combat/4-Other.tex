@@ -1,9 +1,28 @@
 There are several optional rules for combat.
 
+\paragraph*{Sneak Suits}
+
+Troopers may be equipped with advanced camouflage, such as sneak suits.
+Add a +1 modifier to any attack at long range against a trooper wearing a sneak suit.
+
+\begin{table}[H]
+\ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
+\centering
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\begin{tabular}{!{\Vline{1pt}} m{7em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}}}
+\Hline{1pt}
+\rowcolor{black!30}  \bfseries{Condition} & \bfseries{Modifier} \\
+\Hline{1pt}
+Long Range & +1  \\
+\Hline{1pt}
+\end{tabular}
+\caption*{Sneak Suit To Hit Modifiers}
+\end{table}
+
 \paragraph*{Large Targets}
 
 Troopers may target large objects, such as buildings, walls, or vehicles, with explosives.
-Apply a -2 modifier when attacking a large object.
+Use a -2 modifier when attacking a large object.
 
 \begin{table}[H]
 \ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
@@ -16,7 +35,7 @@ Apply a -2 modifier when attacking a large object.
 Large Target & -2  \\
 \Hline{1pt}
 \end{tabular}
-\caption*{To Hit Modifiers}
+\caption*{Large Object To Hit Modifiers}
 \end{table}
 
 If the cumulative damage applied to a wall or building exceeds the toughness of the structure, then the structure is breached.
@@ -61,7 +80,7 @@ More experienced troopers receive extra AP during their turn, but troopers may s
 \rowcolor{black!30}  \bfseries{Experience} & \bfseries{AP Bonus} \\
 \Hline{1pt}
 Green   & -1  \\
-Regular &  0  \\
+Regular & +0  \\
 Veteran & +1  \\
 Elite   & +2  \\
 \Hline{1pt}

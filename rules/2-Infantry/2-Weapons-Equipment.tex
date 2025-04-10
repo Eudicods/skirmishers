@@ -52,6 +52,7 @@ Laser Pistol  & 4X & 11 & 40  \\
 \end{table}
 
 Note, the auto pistol is a burst fire weapon and can fire into the same firing arc multiple times.
+All other weapons may only fire into a firing arc once per turn.
 
 Instead of a ranged secondary weapon, troopers may carry the following hand to hand secondary weapons:
 
@@ -87,8 +88,8 @@ Troopers may use the following explosives:
 \Hline{1pt}
 \rowcolor{black!30}  \bfseries{Weapon} & \bfseries{Damage} & \bfseries{AP Cost} & \bfseries{Ammo} & \bfseries{Short Range} & \bfseries{Long Range} \\
 \Hline{1pt}
-Satchel Charge &   10X/5X/2X & 3 or AP & 1 & AP/2 & --  \\
 Hand Grenade   &    6X/3X/1X & AP      & 4 & AP   & --  \\
+Satchel Charge &   10X/5X/2X & 3 or AP & 1 & AP/2 & --  \\
 \Hline{1pt}
 \end{tabular}
 \caption*{Explosive Weapons}
@@ -105,9 +106,9 @@ A satchel charge is a secondary weapon, so a trooper cannot carry a ranged or ha
 
 Troopers may equip body armor.
 Body armor protects a number of contiguous cells in the armor section of the unit card.
-Cells protected by body armor ignore bludgeoning damage.
-Standard damage is marked like bludgeoning damage on the cell of body armor.
-The first hit with standard damage partially marks the cell (\textbackslash) and the second hit fully marks the cell (X).
+HP cells protected by body armor ignore bludgeoning damage.
+Lethal damage is marked on the unit card like bludgeoning damage on the cell of body armor.
+The first hit with lethal damage partially crosses out the armor cell (\textbackslash) and the second hit fully crosses out the armor cell (X).
 
 \begin{table}[H]
 \ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
@@ -126,5 +127,5 @@ Heavy & 6 & 3  \\
 \end{table}
 
 To equip body armor on a trooper, mark the cells covered by body armor on the unit card.
-Then, reduce the AP to account for the body armor.
+Then, reduce the trooper's AP to account for the body armor.
 For example, with basic body armor, mark 4 contiguous cells as protected by armor and reduce all values in the AP row by 2.

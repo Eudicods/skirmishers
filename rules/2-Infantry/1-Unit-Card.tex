@@ -12,19 +12,19 @@ Basic information about the trooper, such as their name, rank, squad position nu
 
 Damage to the trooper is tracked in the HP section.
 HP cells are labeled by their HP value, from highest to lowest, 10 to 1, from left to right.
-HP cells are fully crossed out when the trooper takes standard damage (X).
-The current HP of the trooper is given by the first cell to the right of the lowest fully marked HP cell.
-For example, if the trooper has HP 9, 7, and 6 marked off and HP 5 partially marked, their current HP is 5.
-
-If the trooper is wearing armor, mark the contiguous block of HP cells protected by the armor in the Armor section.
-Armor must be destroyed before the corresponding HP cell is marked off.
+HP cells are fully crossed out when the trooper takes lethal damage (X) and partially crossed out when the trooper takes bludgeoning damage (\textbackslash).
+The current HP of the trooper is given by the first cell to the right of the lowest fully crossed out HP cell.
+For example, if the trooper has HP 9, 7, and 6 fully crossed out and HP 5 partially crossed out, then their current HP is 5.
 
 Total action points (AP) for the trooper are given in the AP section.
 Use the value in the column corresponding to the trooper's current HP.
-For example, if the trooper has 5 HP, then they have only 7 AP.
+For example, if the trooper has 5 HP, then they have 7 AP.
 
 Similarly, the modifier section tracks the current modifier for the trooper's target numbers based upon current HP.
 For example, if the trooper has 5 HP, then add +2 to all target numbers.
+
+If the trooper is wearing armor, mark the contiguous block of HP cells protected by the armor in the Armor section.
+Armor must be destroyed before the corresponding HP cell is marked off.
 
 The weapons and equipment section list the primary and secondary weapons the trooper is carrying, along with their damage values and range brackets.
 Basic troopers also carry 4 hand grenades and may carry additional equipment.

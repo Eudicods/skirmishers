@@ -29,7 +29,7 @@ This modifier only applies to vehicle control checks and attacks made with weapo
 For example, if the vehicle has 5 HP, then add +2 to all target numbers.
 
 If the vehicle's armor value is given by in the armor section.
-Standard damage (X) destroys armor before damaging HP cells.
+Lethal damage (X) destroys armor before damaging HP cells.
 If a single attack does more damage than the remaining armor, first mark all remaining armor and then roll 2D6 to determine where to apply the remaining damage.
 The standard armor of a scout vehicle is 4 and the standard armor of an assault vehicle is 8.
 
@@ -48,7 +48,8 @@ The signature modifier of a scout vehicle is -1 and the standard signature modif
 The ammo section lists any additional ammo for any weapons mounted on the vehicle.
 
 The weapons section list the weapons mounted on the vehicle, along with their orientation, damage values, and range brackets.
-The standard light scout vehicle has no weapons and the assault vehicle has two forward mounted weapons.
+The standard scout vehicle has no weapons and the standard assault vehicle has two forward mounted weapons.
+Light machine guns, from the crew served weapons table, are the most weapons mounted on vehicles.
 
 \paragraph*{Map Template}
 
@@ -65,7 +66,7 @@ Motorcycles and hoverbikes occupy two dots on the map.
 On the given template, the triangle indicates the front of the vehicle and the square indicates rear of the vehicle.
 
 The trooper sits on the rear dot of the template, and weapon attacks to or from the trooper are measured from this point.
-Weapon attacks from the vehicle are also measured from the read dot of the template, but weapon attacks on the vehicle may target either dot.
+Weapon attacks from the vehicle are also measured from the rear dot of the template, but weapon attacks to the vehicle may target either dot.
 
 \paragraph*{Movement}
 
@@ -153,7 +154,8 @@ Since a 60 degree (1 dot) turn costs no AP to execute, it is the only turn that 
 \end{table}
 
 When executing a 120 or 180 degree turn, the trooper must make a control check.
-A control check is a 2D6 check with the target number set by the chart below, will any applicable modifiers for damage to the trooper and the vehicle.
+A control check is a 2D6 check with the target number gives by the chart below.
+Apply all modifiers for damage to the trooper and the vehicle.
 If the control check fails, the vehicle wipes out.
 
 \begin{table}[H]
@@ -189,41 +191,44 @@ A trooper may incorporate a turn into the deceleration to a full stop, but this 
 180 degree turn & 8  \\
 \Hline{1pt}
 \end{tabular}
-\caption*{Vehicle Deceleration Control Check}
+\caption*{Vehicle Breaking Control Check}
 \end{table}
 
-When a vehicle enters an enemy firing arc, resolve the attack immediately.
-For each AP spent on movement, the vehicle must start or end the segment of movement in the firing arc to be a valid target.
-For example, if a vehicle has a speed modifier of 3 and is only in an enemy firing arc on the second dot for a set of 3 dots of movement, then the enemy trooper cannot fire on the vehicle.
+If vehicle activates in or moves into a firing arc, the firing unit may choose to fire as long as the firing trooper has line of sight.
+For each AP spent on movement, the vehicle must start or end that segment of movement in the firing unit's firing arc to be a valid target.
+For example, if a vehicle has a speed modifier of 3 and is only in the firing unit's firing arc on the second dot for a set of 3 dots of movement, then the firing unit cannot fire on the vehicle.
 
-The enemy unit may target either the vehicle or the trooper, but not both.
+The firing unit may target either the vehicle or the trooper, but not both.
+The firing unit must have a valid line of sight to the rear dot of the vehicle to target the trooper on the vehicle.
 The vehicle and trooper together can only be attacked once for each AP spent on movement.
-For example, if a vehicle has a speed modifier of 2, then the vehicle and trooper together can only be attacked once for each 2 dots traversed.
+For example, if a vehicle has a speed modifier of 2, then the vehicle and trooper together can only be attacked once for each set of 2 dots traversed.
 
-If the damage to the vehicle makes the current movement mode invalid or damage to the trooper leaves insufficient AP to complete the current movement mode, then the vehicle automatically wipe out as if it had failed a control check.
+If the damage to the vehicle makes the current movement mode invalid or damage to the trooper leaves insufficient AP to complete the current movement mode, then the vehicle automatically wipes out as if it had failed a control check.
 
 Explosive damage is applied to both the vehicle and trooper.
 Use the closest point on the vehicle to the center of the explosion to determine how much damage to apply to the vehicle.
+Vehicles are not effected by incendiary damage, but incendiary damage is still applied to the trooper on the vehicle.
 
 \paragraph*{Vehicle Damage}
 
-When applying damage to a vehicle, first apply damage to any remaining armor.
+Vehicles are not effected by bludgeoning damage.
+When applying damage to a vehicle, first apply the damage to any remaining armor.
 If there is remaining damage after the armor is destroyed, roll 2D6.
 This is the initial cell to apply damage in.
-Starting with the initial cell, mark off the number of cells given by the modified damage value, skipping any previously marked cells.
+Starting with the initial cell, cross out the number of cells given by the remaining damage value, skipping any previously crossed out cells.
 
-\paragraph*{Wipeout}
+\paragraph*{Wipe Out}
 
 If a trooper fails a control check, has insufficient AP to complete the current movement mode, or the vehicle is damaged and cannot complete the movement mode, then the vehicle and trooper wipe out.
 
 If the vehicle was attempting to turn, then set the rear of the vehicle as if it had completed a 60 degree shallower turn.
 Then move the vehicle in a straight line along the original direction of travel.
+If the vehicle was using the cruise movement mode, then it skids the number of dots given by 1 AP of movement, and if the vehicle was using the maximum movement mode, then it skids the number of dots given by 2 AP of movement.
 The vehicle is prone once it completes the skid.
 
 For example, if trooper wiped out while executing a 120 degree turn, then set the rear of the vehicle as if it had completed a 60 degree turn.
 The vehicle then skids along the ground in a straight line from this point.
-
-If the vehicle was using the cruise movement mode, then it skids the number of dots given by 1 AP of movement, and if the vehicle was using the maximum movement mode, then it skids the number of dots given by 2 AP of movement.
+If the vehicle was using the maximum movement mode and moves 3 dots per each AP spent on movement, then the vehicle skids 6 dots.
 
 \begin{table}[H]
 \ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
@@ -238,11 +243,11 @@ Cruise  & 1  \\
 Max     & 2  \\
 \Hline{1pt}
 \end{tabular}
-\caption*{Vehicle Wipeout Damage}
+\caption*{Vehicle Wipe Out Damage}
 \end{table}
 
 If the vehicle hits an impassible obstacle or solid obstruction while skidding, then stop the skid immediately and apply ramming damage to the vehicle and trooper.
-If the vehicle does not hit an impassible obstacle or solid obstruction, then after the skid is completed apply wipeout damage to the vehicle and trooper.
+If the vehicle does not hit an impassible obstacle or solid obstruction, then after the skid is completed apply wipe out damage to the vehicle and trooper.
 
 After wiping out, it costs 3 AP for a trooper to climb out from underneath a vehicle and and additional 3 AP to lift the vehicle to an upright position.
 The trooper may chose to be prone or standing after climbing out from underneath the vehicle but remains in the same dot.
@@ -260,7 +265,7 @@ Crawl out    & 3  \\
 Lift vehicle & 3  \\
 \Hline{1pt}
 \end{tabular}
-\caption*{Vehicle Wipeout Costs}
+\caption*{Vehicle Wipe Out Costs}
 \end{table}
 
 \paragraph*{Combat}
@@ -268,10 +273,13 @@ Lift vehicle & 3  \\
 A trooper may make four types of attacks while on a vehicle - ramming, melee, movement fire, and standard fire.
 All of these attacks, except standard fire, occur during the movement of the vehicle.
 
-When a vehicle's front dot is in a dot adjacent to an enemy trooper or vehicle, the vehicle may make a ramming attack.
-Apply the ramming damage to the enemy unit.
+When a vehicle's front dot is in a dot adjacent to an enemy unit, the vehicle may make a ramming attack.
+A trooper on a vehicle cannot be targeted by a ramming attack; only the vehicle may be targeted.
+
+First, apply the ramming damage to the targeted unit.
 Only apply the ramming damage to the vehicle executing the ramming attack if it has no remaining armor.
 Then make a control check with a base target number of 6.
+Apply all modifiers for damage to the trooper and the vehicle.
 On a failed control check, the vehicle wipes out, as above.
 
 \begin{table}[H]
@@ -290,9 +298,13 @@ Max     & 5X  \\
 \caption*{Vehicle Ramming Damage}
 \end{table}
 
-When a vehicle's rear dot is adjacent to enemy trooper or vehicle, the trooper on the vehicle may make a melee attack.
-The trooper's active melee weapon does additional damage based upon the movement mode of the vehicle.
-Apply the melee damage to the enemy trooper, then make a control check with a base target number of 6.
+When a vehicle's rear dot is adjacent to enemy unit, the trooper on the vehicle may make a melee attack as long as a melee weapon is the trooper's current active weapon.
+The trooper's active melee weapon does additional lethal damage based upon the movement mode of the vehicle.
+
+First make a melee attack as normal, applying all appropriate modifiers, including a +2 modifier for a movement attack.
+On a successful attack, apply the melee damage to the enemy trooper including the additional lethal damage given in the chart below.
+After resolving the attack, make a control check with a base target number of 6.
+Apply all modifiers for damage to the trooper and the vehicle.
 On a failed control check, the trooper wipes out, as above.
 
 \begin{table}[H]
@@ -311,11 +323,14 @@ Max     & +2X  \\
 \caption*{Vehicle Melee Damage}
 \end{table}
 
-The trooper may make attacks with the movement fire rules with their current active weapon or any weapons mounted on the vehicle.
-A trooper may only fire their secondary weapon, SMG, or grenade while on a vehicle.
+The trooper on the vehicle may make attacks with the movement fire rules with their current active weapon or any weapons mounted on the vehicle.
+A trooper may only use a secondary weapon, SMG, grenade, or satchel charge while on a vehicle.
 
-As with standard movement fire, add a +2 modifer to the target number.
-Burst fire weapons may be fired multiple times if the trooper has sufficient AP, and the vehicle may continue moving after firing.
+As with standard movement fire, add a +2 modifier to the target number.
+Burst fire weapons may be fired multiple times during movement if the trooper has sufficient AP, and the vehicle may continue moving after firing.
 If the trooper is using an explosive weapon, the explosive damage is still resolved after all troopers have moved, as usual.
 
-After movement, the trooper may automatically establish a 2 AP firing arc with any weapons mounted on the vehicle at a 0 AP cost.
+If a trooper is a passenger in a larger vehicle, such as an assault vehicle, then only apply a +1 modifier for movement fire.
+This passenger trooper may use primary weapons to make movement fire attacks.
+
+After movement, the trooper may automatically establish a 2 AP firing arc with any weapons mounted on the vehicle for 0 AP.

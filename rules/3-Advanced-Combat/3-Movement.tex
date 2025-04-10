@@ -30,14 +30,14 @@ The map may be marked with terrain height, such as with contour lines indicating
 It costs 3 AP to change elevation by crossing a contour line.
 
 Rough terrain and swamps slow trooper movement but otherwise function the same way as standard movement.
-It costs 3 AP to move into a rough dot and 4 AP to move into a swamp dot.
+It costs 3 AP to move into a dot in rough terrain and 4 AP to move into a dot in a swamp.
 Also, swamp counts as an obstruction for the purposes of resolving attacks.
 
 Barbed wire slows trooper movement and may injure or entangle the trooper.
 It costs 6 AP to enter a dot with barbed wire.
-When a trooper enters a dot that has barbed wire, apply 1D6 of bludgeoning damage.
+When a trooper enters a dot that has barbed wire, apply 1D6 of bludgeoning damage to the trooper as if they received a melee attack.
 Then roll 1D6; on a result of 4-6, the trooper is entangled and cannot move further this turn.
-On the trooper's next turn, roll 1D6 again to apply bludgeoning damage, then roll 1D6 to determine if the trooper remains entangled.
+On the entangled trooper's next turn, apply 1D6 of additional bludgeoning damage and then roll 1D6 again to determine if the trooper remains entangled.
 
 It costs 2 AP to enter or exit a tunnel and 3 AP to enter or exit a trench.
 Moving through a trench costs standard movement AP; however, a trooper in a tunnel must crawl and movement costs double the standard AP.
@@ -71,17 +71,19 @@ Defender Swimming  & +1  \\
 
 \paragraph*{Movement Fire}
 
-Troopers may use their current weapon or explosive while moving.
+Troopers may use their current active weapon or explosive while moving.
 Movement fire attacks are resolved after any incoming fire as the trooper moves through firing arcs.
-Add 2 to the target number when using movement fire.
-After the attack, the trooper may continue expending AP to continue moving.
+Compute the target number as normal, but add a +2 modifier to the target number for movement fire.
+After resolving the movement fire attack, the trooper may continue to expend AP for movement.
 
 It costs 2 AP to fire a weapon using movement fire rules.
-Single fire weapons can only fire once during movement fire and the trooper cannot establish a firing arc if they used movement fire with a single fire weapon.
+Single fire weapons can only fire once during movement fire and the trooper cannot establish a firing arc after using movement fire with a single fire weapon.
 Burst fire weapons can be fired multiple times during movement fire and the trooper may still establish a firing arc after their movement.
 
 Troopers may use explosives with movement fire.
+The explosive must be the current active weapon for the trooper.
 The trooper pays the standard AP cost for using the explosive, and the attack is still resolved at the end of the attacking side's turn.
+Compute the target number as normal, but add a +2 modifier to the target number for movement fire.
 
 \begin{table}[H]
 \ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont

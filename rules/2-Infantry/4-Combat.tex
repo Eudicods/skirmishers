@@ -40,9 +40,9 @@ If the roll meets or exceeds the target number, the attack succeeds.
 The base target number for ranged attacks is 6.
 Count the number of dots in the shortest path between the firing trooper and target trooper to determine the range.
 There is no modifier to the target number if the weapon is in short range.
-If the weapon is in long range add a +2 modifier to the target number.
+If the weapon is in long range, then add a +2 modifier to the target number.
 
-Add any modifiers based upon the firing trooper's current HP.
+Apply any modifier for damage to the firing trooper.
 Add a +1 modifier for each obstruction in the path of fire between the firing trooper and the target trooper, except for any obstruction between the firing trooper and any adjacent dots.
 Use a -1 modifier if the firing trooper is prone.
 Add a +1 modifier if the targeted trooper is prone and greater than 1 dot away.
@@ -72,33 +72,37 @@ This is the initial cell to apply damage in.
 
 Each weapon has a lethal damage value (X) and a bludgeoning damage value (\textbackslash).
 Lethal damage is applied first.
-Starting with the initial cell, fully cross out the number of HP cells given by the lethal damage value (X) of the weapon, skipping any previously fully crossed out cells.
-If a cell is protected by body armor, partially cross out the body armor cell instead of marking the HP cell.
-If a body armor cell is partially crossed out, then fully cross out the body armor cell.
+If the trooper has any remaining body armor, cross out body armor cell for each point of lethal damage.
+If any lethal damage remains after destroying any body armor, then apply the remaining damage to the troopers HP cells.
+Start with the initial cell given by the 2D6 roll and fully cross out the number of HP cells given by the lethal damage value (X) of the weapon.
+Skip any previously fully crossed out cells and fully cross out any partially crossed out or undamaged HP cells.
 
 Then apply any bludgeoning damage (\textbackslash).
-Starting with the first cell after the last cell affected by the lethal damage, or the intial cell if the weapon does not have a lethal damage value (X).
+If the trooper has any remaining body armor, then ignore all bludgeoning damage.
+Start with the first cell after the last cell affected by the lethal damage or the initial cell if the weapon does not have a lethal damage value (X).
 Partially cross out the number of HP cells given by the bludgeoning damage value (\textbackslash) of the weapon.
-If an HP cell is partially crossed out, then fully cross out the cell.
-If a cell is protected by body armor, then bludgeoning damage has no effect for this cell.
+If an HP cell is already partially crossed out, then fully cross out the cell.
 
 The targeted trooper's new HP is given by the first cell to the right of the lowest fully crossed out HP cell.
 The corresponding maximum AP is given by this column on the unit card.
 The new maximum AP immediately applies to the targeted trooper.
-If this new AP value meets or exceeds the AP the targeted trooper has spent this turn, the targeted trooper immediately falls prone and can take no further actions.
+If this new AP value meets or exceeds the AP the targeted trooper has already spent this turn, the targeted trooper immediately falls prone and can take no further actions.
 
 If the weapon is not a burst fire weapon (auto pistol, SMG, or laser SMG), then remove the firing arc once the firing is resolved.
-A trooper may decide not to fire if they wish to preserve the firing arc for a future target.
+A trooper may decide to not fire if they wish to preserve the firing arc for a future target.
 
-\paragraph*{Hand to Hand Combat}
+\paragraph*{Melee Combat}
 
-It costs 5 AP to make a hand to hand attack.
-Hand to hand combat is resolved in the same way as ranged combat, and the attack is resolved during the targeted trooper's turn when they activate.
+It costs 5 AP to make a melee attack.
+Troopers may expend additional AP to increase the bludgeoning damage of their fists.
+The amount of bludgeoning damage for a melee attack with fists is given by half the AP used to make the attack, rounded down.
+Melee combat is resolved in the same way as ranged combat, and the attack is resolved during the targeted trooper's turn when they activate.
 
-The attacking trooper must have a hand to hand weapon active.
-The attacking trooper may use an affixed bayonet or use their active weapon as a club.
+The attacking trooper must have a melee weapon active.
+The attacking trooper may use a bayonet attached to their current active weapon or use their active weapon as a club.
+A trooper can always make a melee attack with their fists.
 
-Resolving hand to hand combat is a 2D6 check with the attacking trooper's current active weapon.
+Resolving melee combat is a 2D6 check with the attacking trooper's current active weapon.
 If the roll meets or exceeds the target number, the attack succeeds.
 
 The base target number for melee attacks is 4.
@@ -117,8 +121,8 @@ A trooper automatically switches back to their primary or secondary weapon after
 A trooper can throw a hand grenade or satchel charge down a ladder or stairs any number of levels or up one level, at a cost of 3 AP.
 The trooper must be standing on the stairwell or ladder to throw the explosive up a level and may be on or adjacent to the stairwell or ladder to throw the explosive down any number of levels.
 
-Explosives are resolved similarly to ranged combat, but the attack is resolved at the end of the attacking side's turn.
-Place a token at the targeted dot for the explosives during the trooper's turn and resolve the explosive after all troopers on your side have activated.
+Explosives are resolved in the same way as ranged combat, but the attack is resolved at the end of the attacking side's turn.
+Place a token at the targeted dot for the explosives during the firing trooper's turn and resolve the explosive after all troopers on your side have activated.
 
 Resolving explosives is a 2D6 check with the firing trooper's current active explosive.
 If the roll meets or exceeds the target number, the attack succeeds.
@@ -127,12 +131,14 @@ The base target number is the number of AP used to throw the hand grenade or sat
 Apply all appropriate modifiers given above.
 Since explosives target a dot and not a trooper, do not apply any modifiers for a prone target.
 
-If the target number is met, apply damage starting at the targeted dot and moving outwards.
+If the target number is met, then apply damage starting at the targeted dot and moving outwards.
 Damage is applied as above.
 Impassible obstacles between the center of the explosion and the affected trooper, such as a solid high wall or the truck of a tree, block explosive damage.
 Low solid obstructions such as furniture and windows also block explosive damage if the affected trooper is prone.
+Explosive damage is also applied to troopers above or below the explosion, such as in a stairwell.
+Treat each level of height as one dot further away from the center of the explosion.
 
-If the target number is not met, the explosive scatters.
+If the target number is not met, then the explosive scatters.
 The explosive scatters from the targeted dot.
 Roll 1D6 to determine the scatter direction, identifying one direction to correspond to a result of 1 and proceeding clockwise with the other values.
 If the path of scatter intersects an impassible obstacle, such as a solid high wall, then the explosive does not scatter and the center of the explosion stays on the targeted dot.

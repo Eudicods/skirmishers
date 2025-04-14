@@ -1,0 +1,25 @@
+Under the standard rules, a trooper ignores bludgeoning damage while wearing armor and any cells of armor are destroyed before applying lethal damage to the trooper.
+With the advanced body armor rules, the body armor protects a number of contiguous cells in the armor section of the unit card.
+Only HP cells protected by body armor ignore bludgeoning damage.
+Lethal damage is marked on the unit card like bludgeoning damage on the cell of body armor.
+The first hit with lethal damage partially crosses out the armor cell (\textbackslash) and the second hit fully crosses out the armor cell (X).
+
+\begin{table}[H]
+\ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
+\centering
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\begin{tabular}{!{\Vline{1pt}} m{6.5em} !{\Vline{1pt}} R{5em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}}}
+\Hline{1pt}
+\rowcolor{black!30}  \bfseries{Armor Type} & \bfseries{Coverage} & \bfseries{AP Cost} \\
+\Hline{1pt}
+Basic    & 2 & 1  \\
+Standard & 4 & 2  \\
+Heavy    & 6 & 3  \\
+\Hline{1pt}
+\end{tabular}
+\caption*{Body Armor AP Costs}
+\end{table}
+
+To equip body armor on a trooper, mark the cells covered by body armor on the unit card.
+Then, reduce the trooper's AP to account for the body armor.
+For example, with standard body armor, mark 4 contiguous cells as protected by armor and reduce all values in the AP row by 2.

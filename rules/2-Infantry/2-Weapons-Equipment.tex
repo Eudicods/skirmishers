@@ -12,23 +12,21 @@ Troopers can use the following primary weapons:
 \ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
 \centering
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\begin{tabular}{!{\Vline{1pt}} m{6em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}} R{6.5em} !{\Vline{1pt}} R{6.5em} !{\Vline{1pt}} R{2em} !{\Vline{1pt}}}
+\begin{tabular}{!{\Vline{1pt}} m{6em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}} R{3em} !{\Vline{1pt}} R{6.5em} !{\Vline{1pt}} R{6.5em} !{\Vline{1pt}} R{2em} !{\Vline{1pt}}}
 \Hline{1pt}
-\rowcolor{black!30}  \bfseries{Weapon} & \bfseries{Damage} & \bfseries{AP Cost} & \bfseries{Short Range} & \bfseries{Long Range} & \bfseries{PV} \\
+\rowcolor{black!30}  \bfseries{Weapon} & \bfseries{Damage} & \bfseries{Shots} & \bfseries{Short Range} & \bfseries{Long Range} & \bfseries{PV} \\
 \Hline{1pt}
-SMG           & 3X & 1 &  5 &  17 &  23  \\
-Rifle         & 4X & 3 & 26 &  85 & 159  \\
-Laser SMG     & 4X & 1 & 43 & 127 &  76  \\
-Laser Rifle   & 5X & 3 & 66 & 232 & 143  \\
-Long Rifle    & 6X & 4 & 30 & 102 & 107  \\
-Gyrojet Rifle & 6X & 4 & 31 & 137 & 107  \\
+SMG           & 3X & 8 &  5 &  17 &  23  \\
+Rifle         & 4X & 2 & 26 &  85 & 159  \\
+Laser SMG     & 4X & 8 & 43 & 127 &  76  \\
+Laser Rifle   & 5X & 2 & 66 & 232 & 143  \\
+Gyrojet Rifle & 6X & 1 & 31 & 137 & 107  \\
 \Hline{1pt}
 \end{tabular}
 \caption*{Primary Weapons}
 \end{table}
 
-Each weapon has an AP cost per shot.
-A weapon can fire into the same firing arc multiple times as long as the firing trooper has sufficient AP remaining, but the trooper may always fire at least once.
+Each weapon can only fire a limited number of shots into a firing arc.
 
 \paragraph*{Secondary Weapons}
 
@@ -39,20 +37,19 @@ Troopers can use the following ranged secondary weapons:
 \ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
 \centering
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\begin{tabular}{!{\Vline{1pt}} m{6em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}} R{6.5em} !{\Vline{1pt}} R{6.5em} !{\Vline{1pt}} R{2em} !{\Vline{1pt}}}
+\begin{tabular}{!{\Vline{1pt}} m{6em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}} R{3em} !{\Vline{1pt}} R{6.5em} !{\Vline{1pt}} R{6.5em} !{\Vline{1pt}} R{2em} !{\Vline{1pt}}}
 \Hline{1pt}
-\rowcolor{black!30}  \bfseries{Weapon} & \bfseries{Damage} & \bfseries{AP Cost} & \bfseries{Short Range} & \bfseries{Long Range} & \bfseries{PV} \\
+\rowcolor{black!30}  \bfseries{Weapon} & \bfseries{Damage} & \bfseries{Shots} & \bfseries{Short Range} & \bfseries{Long Range} & \bfseries{PV} \\
 \Hline{1pt}
-Pistol        & 2X & 2 &  7 & 20 & 13  \\
-Auto Pistol   & 3X & 1 &  6 & 22 & 19  \\
-Laser Pistol  & 4X & 2 & 11 & 40 & 64  \\
+Pistol        & 2X & 3 &  7 & 20 & 13  \\
+Auto Pistol   & 3X & 8 &  6 & 22 & 19  \\
+Laser Pistol  & 4X & 3 & 11 & 40 & 64  \\
 \Hline{1pt}
 \end{tabular}
 \caption*{Ranged Secondary Weapons}
 \end{table}
 
-Each weapon has an AP cost per shot.
-A weapon can fire into the same firing arc multiple times as long as the firing trooper has sufficient AP remaining, but the trooper may always fire at least once.
+Each weapon can only fire a limited number of shots into a firing arc.
 
 Troopers can use the following melee secondary weapons:
 

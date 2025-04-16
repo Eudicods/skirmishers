@@ -23,19 +23,38 @@ This attack is resolved before the targeted trooper continues their movement.
 \caption*{Firing Arc AP Costs}
 \end{table}
 
+\paragraph*{Line of Sight}
+
+If a trooper can only attack a target if they have a valid line of sight.
+Draw a straight line between the firing trooper and the targeted trooper.
+Obstructions, such as furniture, light vegetation, and low walls, provide cover but do not block line of sight.
+Additional troopers, enemy or friendly, between the firing trooper and the targeted trooper also provide cover, unless the firing trooper is standing and the intervening trooper is prone.
+Impassible obstacles, such as a solid high wall, the truck of a tree, or a trooper, block line of sight.
+
+If the firing trooper or targeted trooper is prone, then any solid low obstructions, such as furniture and low walls, that are adjacent to firing trooper block line of sight.
+If the firing trooper and the targeted trooper are prone, then any solid low obstructions block line of sight.
+
+If either the firing trooper or the targeted trooper is at a higher level, such as at the window in a building, then only obstructions and obstacles at the same level of the higher trooper provide cover or block line of sight.
+However, all obstructions and obstacles within one dot of the targeted trooper always provides cover or blocks line of sight.
+
 \paragraph*{Resolving Fire}
 
 Note: Players resolve fire during the enemy movement, which occurs during your opponent's turn.
 
-If an enemy trooper activates in or moves into a firing arc, the firing trooper may choose to fire as long as the firing trooper has line of sight.
-A trooper may decide not to fire if they wish to preserve the firing arc for a future target.
+If an enemy trooper activates in or moves into a firing arc, the firing trooper may choose to fire as long as the firing trooper has a valid line of sight.
+If an enemy trooper is in multiple firing arcs, then firing troopers may all choose to fire, in any order.
+If an enemy trooper stands from prone, then they may be shot by any firing trooper that did not previously attack them on the current dot.
+A firing trooper may decide to not fire if they wish to preserve the firing arc for a future target.
 
-Draw a straight line between the firing trooper and the targeted trooper.
-Obstructions, such as furniture, light vegetation, and low walls, provide cover but do not block line of sight.
-Impassible obstacles, such as a solid high wall, the truck of a tree, or a trooper, block line of sight.
+The firing trooper may spend up to their current maximum AP firing into their firing arc during enemy movement.
+First, mark the AP spent by the firing trooper based upon the AP cost of their current active weapon.
+A trooper may make multiple attacks with their current active weapon as long as they have sufficient remaining AP.
+A trooper may always make a minimum of 1 attack into a firing arc.
+For example, a trooper 8 AP may fire a pistol twice into a firing arc while a trooper with 4 AP may only fire a long rifle once.
+After marking the AP spent firing, resolve the attack.
 
 Resolving fire is a 2D6 check with the firing trooper's current active weapon.
-If the roll meets or exceeds the target number, the attack succeeds.
+If the roll meets or exceeds the target number, then the attack succeeds.
 
 The base target number for ranged attacks is 6.
 Count the number of dots in the shortest path between the firing trooper and target trooper to determine the range.
@@ -88,14 +107,13 @@ The corresponding maximum AP is given by this column on the unit card.
 The new maximum AP immediately applies to the targeted trooper.
 If this new AP value meets or exceeds the AP the targeted trooper has already spent this turn, the targeted trooper immediately falls prone and can take no further actions.
 
-If the weapon is not a burst fire weapon (auto pistol, SMG, or laser SMG), then remove the firing arc once the firing is resolved.
+If the firing trooper has insufficient remaining AP to make additional attacks in the firing arc, then remove the firing arc once the firing is resolved.
 A trooper may decide to not fire if they wish to preserve the firing arc for a future target.
 
 \paragraph*{Melee Combat}
 
 It costs 5 AP to make a melee attack.
-Troopers may expend additional AP to increase the bludgeoning damage of their fists.
-The amount of bludgeoning damage for a melee attack with fists is given by half the AP used to make the attack, rounded down.
+The amount of bludgeoning damage for a melee attack with fists is given by half the attacking trooper's current maximum AP.
 Melee combat is resolved in the same way as ranged combat, and the attack is resolved during the targeted trooper's turn when they activate.
 
 The attacking trooper must have a melee weapon active.
@@ -103,7 +121,7 @@ The attacking trooper may use a bayonet attached to their current active weapon 
 A trooper can always make a melee attack with their fists.
 
 Resolving melee combat is a 2D6 check with the attacking trooper's current active weapon.
-If the roll meets or exceeds the target number, the attack succeeds.
+If the roll meets or exceeds the target number, then the attack succeeds.
 
 The base target number for melee attacks is 4.
 Apply all appropriate modifiers given above, except any modifiers for cover.
@@ -125,7 +143,7 @@ Explosives are resolved in the same way as ranged combat, but the attack is reso
 Place a token at the targeted dot for the explosives during the firing trooper's turn and resolve the explosive after all troopers on your side have activated.
 
 Resolving explosives is a 2D6 check with the firing trooper's current active explosive.
-If the roll meets or exceeds the target number, the attack succeeds.
+If the roll meets or exceeds the target number, then the attack succeeds.
 
 The base target number is the number of AP used to throw the hand grenade or satchel charge.
 Apply all appropriate modifiers given above.
@@ -140,6 +158,7 @@ Treat each level of height as one dot further away from the center of the explos
 
 If the target number is not met, then the explosive scatters.
 The explosive scatters from the targeted dot.
+If the explosive was fired through a window, then the explosive scatters from the first dot before the window along the line of sight.
 Roll 1D6 to determine the scatter direction, identifying one direction to correspond to a result of 1 and proceeding clockwise with the other values.
 If the path of scatter intersects an impassible obstacle, such as a solid high wall, then the explosive does not scatter and the center of the explosion stays on the targeted dot.
 Move the center of the explosion to the new dot and apply damage as above.

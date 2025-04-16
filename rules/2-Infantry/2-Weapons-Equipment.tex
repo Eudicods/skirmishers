@@ -12,23 +12,23 @@ Troopers can use the following primary weapons:
 \ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
 \centering
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\begin{tabular}{!{\Vline{1pt}} m{6em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}} R{6.5em} !{\Vline{1pt}} R{6.5em} !{\Vline{1pt}}}
+\begin{tabular}{!{\Vline{1pt}} m{6em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}} R{6.5em} !{\Vline{1pt}} R{6.5em} !{\Vline{1pt}}}
 \Hline{1pt}
-\rowcolor{black!30}  \bfseries{Weapon} & \bfseries{Damage} & \bfseries{Short Range} & \bfseries{Long Range} \\
+\rowcolor{black!30}  \bfseries{Weapon} & \bfseries{Damage} & \bfseries{AP Cost} & \bfseries{Short Range} & \bfseries{Long Range} \\
 \Hline{1pt}
-SMG*          & 3X &  5 &  17  \\
-Rifle         & 4X & 26 &  85  \\
-Laser SMG*    & 4X & 43 & 127  \\
-Laser Rifle   & 5X & 66 & 232  \\
-Long Rifle    & 6X & 30 & 102  \\
-Gyrojet Rifle & 6X & 31 & 137  \\
+SMG           & 3X & 1 &  5 &  17  \\
+Rifle         & 4X & 4 & 26 &  85  \\
+Laser SMG     & 4X & 1 & 43 & 127  \\
+Laser Rifle   & 5X & 4 & 66 & 232  \\
+Long Rifle    & 6X & 6 & 30 & 102  \\
+Gyrojet Rifle & 6X & 6 & 31 & 137  \\
 \Hline{1pt}
 \end{tabular}
 \caption*{Primary Weapons}
 \end{table}
 
-Note, the SMG and Laser SMG are burst fire weapons and can fire into the same firing arc multiple times.
-All other weapons may only fire into a firing arc once per turn.
+Each weapon has an AP cost per shot.
+A weapon can fire into the same firing arc multiple times as long as the firing trooper has sufficient AP remaining, but the trooper may always fire at least once.
 
 \paragraph*{Secondary Weapons}
 
@@ -39,20 +39,20 @@ Troopers can use the following ranged secondary weapons:
 \ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
 \centering
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\begin{tabular}{!{\Vline{1pt}} m{6em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}} R{6.5em} !{\Vline{1pt}} R{6.5em} !{\Vline{1pt}}}
+\begin{tabular}{!{\Vline{1pt}} m{6em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}} R{6.5em} !{\Vline{1pt}} R{6.5em} !{\Vline{1pt}}}
 \Hline{1pt}
-\rowcolor{black!30}  \bfseries{Weapon} & \bfseries{Damage} & \bfseries{Short Range} & \bfseries{Long Range} \\
+\rowcolor{black!30}  \bfseries{Weapon} & \bfseries{Damage} & \bfseries{AP Cost} & \bfseries{Short Range} & \bfseries{Long Range} \\
 \Hline{1pt}
-Pistol        & 2X &  7 & 20  \\
-Auto Pistol*  & 3X &  6 & 22  \\
-Laser Pistol  & 4X & 11 & 40  \\
+Pistol        & 2X & 3 &  7 & 20  \\
+Auto Pistol   & 3X & 1 &  6 & 22  \\
+Laser Pistol  & 4X & 3 & 11 & 40  \\
 \Hline{1pt}
 \end{tabular}
 \caption*{Ranged Secondary Weapons}
 \end{table}
 
-Note, the auto pistol is a burst fire weapon and can fire into the same firing arc multiple times.
-All other weapons may only fire into a firing arc once per turn.
+Each weapon has an AP cost per shot.
+A weapon can fire into the same firing arc multiple times as long as the firing trooper has sufficient AP remaining, but the trooper may always fire at least once.
 
 Troopers can use the following melee secondary weapons:
 
@@ -60,17 +60,17 @@ Troopers can use the following melee secondary weapons:
 \ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
 \centering
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\begin{tabular}{!{\Vline{1pt}} m{7.2em} !{\Vline{1pt}} R{5em} !{\Vline{1pt}} R{6.5em} !{\Vline{1pt}} R{6.5em} !{\Vline{1pt}}}
+\begin{tabular}{!{\Vline{1pt}} m{7.2em} !{\Vline{1pt}} R{5.8em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}} R{6.5em} !{\Vline{1pt}} R{6.5em} !{\Vline{1pt}}}
 \Hline{1pt}
-\rowcolor{black!30}  \bfseries{Weapon} & \bfseries{Damage} & \bfseries{Short Range} & \bfseries{Long Range} \\
+\rowcolor{black!30}  \bfseries{Weapon} & \bfseries{Damage} & \bfseries{AP Cost} & \bfseries{Short Range} & \bfseries{Long Range} \\
 \Hline{1pt}
-Fists         & (AP/2)\textbackslash & 1 & --  \\
-Bayonet/Knife & 3X                   & 1 & --  \\
-Blackjack     & 5\textbackslash      & 1 & --  \\
-Club          & 1X, 4\textbackslash  & 1 & --  \\
-Stun Baton    & 8\textbackslash      & 1 & --  \\
-Sword         & 4X                   & 1 & --  \\
-Vibroblade    & 5X                   & 1 & --  \\
+Fists         & (max AP/2)\textbackslash & 5 & 1 & --  \\
+Bayonet/Knife & 3X                       & 5 & 1 & --  \\
+Blackjack     & 5\textbackslash          & 5 & 1 & --  \\
+Club          & 1X, 4\textbackslash      & 5 & 1 & --  \\
+Stun Baton    & 8\textbackslash          & 5 & 1 & --  \\
+Sword         & 4X                       & 5 & 1 & --  \\
+Vibroblade    & 5X                       & 5 & 1 & --  \\
 \Hline{1pt}
 \end{tabular}
 \caption*{Melee Secondary Weapons}
@@ -103,7 +103,7 @@ The damage is given is descending order for the point of detonation, the adjacen
 It takes 1 AP per dot to throw a hand grenade and it takes 2 AP per dot to throw a satchel charge.
 
 A trooper carries 4 grenades in addition to their primary and secondary weapons.
-A satchel charge is a secondary weapon, so a trooper cannot carry a ranged or melee secondary weapon if they are carrying a satchel charge.
+A satchel charge is a secondary weapon, so a trooper cannot carry another secondary weapon if they are carrying a satchel charge.
 
 \paragraph*{Body Armor}
 

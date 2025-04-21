@@ -4,6 +4,10 @@ After moving, troopers may use any remaining AP for combat actions, such as esta
 
 A trooper may establish a 30 degree, 60 degree, or 150 degree firing arc by paying the corresponding AP.
 When establishing a firing arc, the vertex of the arc is the dot the trooper is standing on and can be oriented in any direction.
+The trooper may make a fixed number of shots into the firing arc, given by the base number of shots for the firing arc multiplied by the weapon modifier.
+For example, a 60 degree firing arc has a base of 2 shots.
+A trooper with a pistol may shoot into this arc up to 4 times, while a trooper with a SMG may shoot into this arc 6 times.
+
 When an enemy trooper activates in or moves into the firing arc, the firing trooper may fire upon the targeted trooper.
 This attack is resolved before the targeted trooper continues their movement.
 
@@ -11,13 +15,13 @@ This attack is resolved before the targeted trooper continues their movement.
 \ifthenelse{\not \equal{\outworldsMode}{mode-web}}{\fontfamily{Montserrat-LF}}{\small}\selectfont
 \centering
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\begin{tabular}{!{\Vline{1pt}} m{8em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}}}
+\begin{tabular}{!{\Vline{1pt}} m{8em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}} R{4.5em} !{\Vline{1pt}}}
 \Hline{1pt}
-\rowcolor{black!30}  \bfseries{Firing Arc Size} & \bfseries{AP Cost} \\
+\rowcolor{black!30}  \bfseries{Firing Arc Size} & \bfseries{Shots} & \bfseries{AP Cost} \\
 \Hline{1pt}
-30 Degrees  & 2  \\
-60 Degrees  & 4  \\
-150 Degrees & 6  \\
+30 Degrees  & 1 & 2  \\
+60 Degrees  & 2 & 4  \\
+150 Degrees & 4 & 6  \\
 \Hline{1pt}
 \end{tabular}
 \caption*{Firing Arc AP Costs}
@@ -107,7 +111,7 @@ A trooper may decide to not fire if they wish to preserve the firing arc for a f
 
 It costs 5 AP to make a melee attack.
 The amount of bludgeoning damage for a melee attack with fists is given by half the attacking trooper's current maximum AP.
-Melee combat is resolved in the same way as ranged combat, and the attack is resolved during the targeted trooper's turn when they activate.
+Melee combat is resolved in the same way as ranged combat, and the attack is resolved during the targeted trooper's turn when they activate, before the targeted trooper takes any actions or movement.
 
 The attacking trooper must have a melee weapon active.
 The attacking trooper may use a bayonet attached to their current active weapon or use their active weapon as a club.
